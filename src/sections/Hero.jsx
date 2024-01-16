@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <div
       style={{ backgroundImage: `url(${background})` }}
-      className=" bg-cover h-[82dvh] text-white "
+      className="relative bg-cover h-[82dvh] text-white"
     >
-      <div className="relative">
+      <div className=" ">
         {/* Write-up  */}
         <div className=" pt-32 pl-24">
           <p className="font-Lobster text-8xl mb-10">
@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
 
         {/* Search Bar  */}
-        <div className=" pl-80  ">
+        <div className="flex justify-center">
           <SearchBar />
         </div>
       </div>

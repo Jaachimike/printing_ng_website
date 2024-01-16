@@ -3,6 +3,7 @@ import Logo from "../assets/svg/Printin logo.svg";
 import facebook from "../assets/svg/facebook_logo_icon.svg";
 import instagram from "../assets/svg/instagram_logo_icon.svg";
 import linkedin from "../assets/svg/linkedin_logo.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
           <br />
           OFF IKORODU ROAD, SHOMOLU,. LAGOS.
           <br />
-          <a href="telto:+2348163534401">
+          <a href="tel:+2348163534401">
             <span className=" font-bold">Tel:</span> +234 816 353 4401
           </a>
           <br />
@@ -32,9 +33,9 @@ const Footer = () => {
         <h3 className=" text-lg font-medium mb-4">PRINTINGNG</h3>
         <ul className="list-unstyled ">
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link className="hover:text-blue-400" to="about">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="hover:text-blue-400">
@@ -82,14 +83,14 @@ const Footer = () => {
         <h3 className=" text-lg font-medium mb-4">INFORMATION</h3>
         <ul className="list-unstyled ">
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link className="hover:text-blue-400" to="privacy_policy">
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link className="hover:text-blue-400" to="terms_conditions">
               Terms & Conditions
-            </a>
+            </Link>
           </li>
         </ul>
 

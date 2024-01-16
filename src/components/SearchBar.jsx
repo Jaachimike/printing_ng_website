@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import searchIcon from "../assets/svg/icons8-search.svg";
 
 const SearchBar = () => {
@@ -15,7 +15,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className=" max-w-4xl">
+    <div className="max-w-4xl">
       <form
         onSubmit={handleSubmit}
         className="flex items-center bg-gray-100 py-4 px-12 rounded-full border-solid border-4 border-[#0064A3]"
