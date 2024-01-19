@@ -146,15 +146,16 @@ const HomePage = () => {
       {/* POPULAR PRODUCTS */}
       <div className="mb-20 mt-8">
         <SectionHeader header="Popular Products" />
-        <div className=" mx-auto max-w-7xl grid grid-cols-4 gap-x-8 gap-y-12 ">
+        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
           {popularProducts.map((product, index) => {
             return (
-                    <ProductDisplay
-                        key = {index}
-                        title= {product.title}
-                        price = {product.price}
-                        description = {product.description} />
-                )
+              <ProductDisplay
+                key={index}
+                title={product.title}
+                price={product.price}
+                description={product.description}
+              />
+            );
           })}
         </div>
       </div>
@@ -162,15 +163,26 @@ const HomePage = () => {
       {/* POPULAR CATEGORIES */}
       <div className="mb-20 mt-8">
         <SectionHeader header="Popular Categories" />
-        <div className=" mx-auto max-w-7xl grid grid-cols-4 gap-x-8 gap-y-12 ">
-          {popularCategoriesDisplay}
+        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
+          {/* {popularCategoriesDisplay} */}
+
+          {popularCategories.map((product, index) => {
+            return (
+              <ProductDisplay
+                key={index}
+                title={product.title}
+                price={product.price}
+                description={product.description}
+              />
+            );
+          })}
         </div>
       </div>
 
       {/* FEATURES  */}
       <div className="mb-20">
         <SectionHeader header="Features" />
-        <div className=" mx-auto flex justify-center">
+        <div className=" mx-auto max-w-7xl flex flex-col md:flex-row justify-center">
           <div className=" bg-[#E9F8FE] pl-8 pr-20 pt-6 pb-14 rounded-xl">
             {/* Header  */}
             <div className=" flex items-center">
