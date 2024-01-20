@@ -183,8 +183,8 @@ const HomePage = () => {
       <div className="mb-20">
         <SectionHeader header="Features" />
         <div className=" mx-auto max-w-7xl flex flex-col md:flex-row justify-center">
-          <div className=" bg-[#E9F8FE] pl-8 pr-20 pt-6 pb-14 rounded-xl">
-            {/* Header  */}
+          <div className=" bg-[#E9F8FE] mx-10 md:mx-0 mb-6 md:mb-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
+            {/* Speed  */}
             <div className=" flex items-center">
               <img srcSet={speedometer} alt="" className=" h-24" />
               <h3 className="pt-7 font-bold text-[#706D6D] text-2xl ">SPEED</h3>
@@ -194,8 +194,8 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className=" bg-[#E9F8FE] mx-10 pl-8 pr-20 pt-6 pb-14 rounded-xl">
-            {/* Header  */}
+          <div className=" bg-[#E9F8FE] mx-10 mb-6 md:mb-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
+            {/* Quality  */}
             <div className=" flex items-center">
               <img src={quality} alt="" className=" h-24" />
               <h3 className="pt-7 font-bold text-[#706D6D] text-2xl ">
@@ -208,8 +208,8 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className=" bg-[#E9F8FE] pl-8 pr-20 pt-6 pb-14 rounded-xl">
-            {/* Header  */}
+          <div className=" bg-[#E9F8FE] mx-10 mb-6 md:mb-0 md:mx-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
+            {/*Affordability  */}
             <div className=" flex items-center">
               <img src={affordability} alt="" className=" h-24" />
               <h3 className="pt-7 font-bold text-[#706D6D] text-2xl ">
@@ -229,7 +229,7 @@ const HomePage = () => {
       {/* SUBSCRIBE TO NEWS LETTER  */}
       <div className=" mb-20">
         <SectionHeader header="Subscribe to our Newsletter" />
-        <div className="bg-white flex justify-center">
+        {/* <div className="bg-white flex justify-center">
           <form
             onSubmit={handleSubmit}
             className="flex items-center shadow-lg  py-3 px-10  "
@@ -250,7 +250,7 @@ const HomePage = () => {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   );

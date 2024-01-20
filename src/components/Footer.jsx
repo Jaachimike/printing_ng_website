@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#DFEFFF] py-8 pl-16 flex flex-col items-center sm:flex-row sm:justify-between sm:items-start">
+    <footer className="bg-[#DFEFFF] py-8 pl-8 lg:pl-16 flex flex-col items-start md:flex-row md:justify-between md:items-start *:mb-6">
+      {/* 1st column  */}
       <div className="sm:w-1/4">
         <a href="/" className="flex items-center mb-4">
-          <img src={Logo} alt="Logo" className="w-auti h-16 mr-4" />
+          <img src={Logo} alt="Logo" className="w-auto h-16 mr-4" />
         </a>
         <p className="text-gray-500 text-sm">
           #59, AKEJU STREET,
@@ -29,6 +30,7 @@ const Footer = () => {
           Copyright © 2024 All Rights Reserved
         </p>
       </div>
+      {/* second column  */}
       <div className="sm:w-1/4">
         <h3 className=" text-lg font-medium mb-4">PRINTINGNG</h3>
         <ul className="list-unstyled ">
@@ -59,6 +61,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
+      {/* third column  */}
       <div className="sm:w-1/4">
         <h3 className=" text-lg font-medium mb-4">GET STARTED</h3>
         <ul className="list-unstyled ">
@@ -79,6 +82,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
+      {/* fourth column  */}
       <div className="sm:w-1/4">
         <h3 className=" text-lg font-medium mb-4">INFORMATION</h3>
         <ul className="list-unstyled ">

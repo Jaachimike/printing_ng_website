@@ -30,11 +30,9 @@ const ProductDisplay = ({ title, price, description }) => {
             </p>
             <div class="flex items-center">
               <p class="text-lg font-semibold text-black cursor-auto my-3">
-                $149
+                &#8358;{price}
               </p>
-              <del>
-                <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-              </del>
+
               <div class="ml-auto">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
