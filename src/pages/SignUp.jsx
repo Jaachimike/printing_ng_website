@@ -15,77 +15,89 @@ export const SignUp = () => {
 
         <div className="flex justify-center">
           {/* LOGIN FORM  */}
-          <form class="flex flex-col gap-4 bg-[#CAEFFF] py-10 px-36">
-            {/*FIRST NAME FIELD  */}
-            <div class="flex items-center">
-              <label for="field1" class="w-32 font-semibold">
-                First Name:
-              </label>
-              <input
-                type="text"
-                id="first_name"
-                class="w-96 border border-gray-300 rounded-full p-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+          <form class="flex flex-col gap-4 bg-[#CAEFFF] py-10 px-6 lg:px-36">
+            {/* FIRST NAME FIELD */}
+            <div class="group w-80 md:w-80 lg:w-96 mx-auto lg:ml-10 ">
+              <div class="relative flex items-center space-x-9 lg:space-x-6">
+                <span class="lg:whitespace-nowrap material-symbols-outlined transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+                  First Name
+                </span>
+                <input
+                  id="6"
+                  type="text"
+                  class="peer relative h-10 w-full rounded-full bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                />
+              </div>
             </div>
 
             {/* LAST NAME FIELD  */}
-            <div class="flex items-center">
-              <label for="field1" class="w-32 font-semibold">
-                Last Name:
-              </label>
-              <input
-                type="text"
-                id="last_name"
-                class="w-96 border border-gray-300 rounded-full p-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+            <div class="group w-80 md:w-80 lg:w-96 mx-auto lg:ml-10 ">
+              <div class="relative flex items-center space-x-9 lg:space-x-6">
+                <span class="lg:whitespace-nowrap material-symbols-outlined transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+                  Last Name
+                </span>
+                <input
+                  id="6"
+                  type="text"
+                  class="peer relative h-10 w-full rounded-full bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                />
+              </div>
             </div>
 
-            {/* EMAIL FIELD  */}
-            <div class="flex items-center">
-              <label for="field1" class="w-32 font-semibold">
-                Email:
-              </label>
-              <input
-                type="email"
-                id="email"
-                class="w-96 border border-gray-300 rounded-full p-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+            {/* EMAIL FIELD */}
+            <div class="group w-80 md:w-80 lg:w-96 mx-auto lg:ml-10 ">
+              <div class="relative flex items-center space-x-12 lg:space-x-14">
+                <span class="material-symbols-outlined transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+                  Email
+                </span>
+                <input
+                  id="6"
+                  type="text"
+                  class="peer relative h-10 w-full rounded-full bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                />
+              </div>
             </div>
 
-            {/* PHONE FIELD  */}
-            <div class="flex items-center">
-              <label for="field1" class="w-32 font-semibold">
-                Phone:
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                class="w-96 border border-gray-300 rounded-full p-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+            {/*PHONE NUMBER FIELD */}
+            <div class="group w-80 md:w-80 lg:w-96 mx-auto lg:ml-10 ">
+              <div class="relative flex items-center space-x-11 lg:space-x-14">
+                <span class="material-symbols-outlined transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+                  Phone
+                </span>
+                <input
+                  id="6"
+                  type="text"
+                  class="peer relative h-10 w-full rounded-full bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                />
+              </div>
             </div>
 
             {/* PASSWORD FIELD  */}
-            <div class="flex items-center">
-              <label for="field2" class="w-32 font-semibold">
-                Password:
-              </label>
-              <input
-                type="password"
-                id="password"
-                class="w-96 border border-gray-300 rounded-full p-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+            <div class="group w-80 md:w-80 lg:w-96 mx-auto lg:ml-10 ">
+              <div class="relative flex items-center space-x-5 lg:space-x-8">
+                <span class="material-symbols-outlined transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+                  Password
+                </span>
+                <input
+                  id="6"
+                  type="text"
+                  class="peer relative h-10 w-full rounded-full bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                />
+              </div>
             </div>
 
             {/* CONFIRM PASSWORD FIELD  */}
-            <div class="flex items-center">
-              <label for="field2" class="w-32 font-semibold">
-                Confirm Password:
-              </label>
-              <input
-                type="password"
-                id="password"
-                class="w-96 border border-gray-300 rounded-full p-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+            <div class="group w-80 md:w-80 lg:w-full mx-auto lg:ml-0 ">
+              <div class="relative flex items-center lg:space-x-5">
+                <span class="lg:whitespace-nowrap material-symbols-outlined transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+                  Confirm Password
+                </span>
+                <input
+                  id="6"
+                  type="text"
+                  class="peer relative h-10 w-full rounded-full bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
+                />
+              </div>
             </div>
 
             <div className="flex justify-center ">
