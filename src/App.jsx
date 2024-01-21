@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import Login from "./pages/Login.jsx";
 import { SignUp } from "./pages/SignUp.jsx";
+import RollupBanners from "./pages/product_details/RollupBanners.jsx";
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
       <Routes>
         <Route index path="/" element={<HomePage />} />
         <Route path="about" element={<AboutUs />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products" element={<Products />}></Route>
         <Route path="privacy_policy" element={<PrivacyPolicy />} />
         <Route path="terms_conditions" element={<TermsAndConditions />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="rollup_banner" element={<RollupBanners />} />
       </Routes>
       <Footer />
     </BrowserRouter>

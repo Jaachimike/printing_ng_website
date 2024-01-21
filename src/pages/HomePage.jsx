@@ -5,7 +5,16 @@ import speedometer from "../assets/svg/speedometer_icon.svg";
 import quality from "../assets/svg/quality_icon.svg";
 import affordability from "../assets/svg/money_icon.svg";
 import SearchBar from "../components/SearchBar";
-import product_img from "../assets/jpeg/product_image.jpg";
+import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
+import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
+import business_cards from "../assets/png/product_images/BUSINESS-CARDS.png";
+import calendar from "../assets/png/product_images/CALENDAR.png";
+import feather_banner from "../assets/png/product_images/FEATHER-BANNER.png";
+import gift_bags from "../assets/png/product_images/GIFT-BAGS.png";
+import letterhead from "../assets/png/product_images/LETTER-HEAD.png";
+import magazine from "../assets/png/product_images/MAGAZINE.png";
+import product_packaging from "../assets/png/product_images/PRODUCT-PACKAGING.png";
+import roullup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
 
 const SectionHeader = (props) => {
   return (
@@ -21,87 +30,90 @@ SectionHeader.defaultProps = {
 
 const popularProducts = [
   {
-    id: 1,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Greeting Cards",
+    price: "9999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Up your professional game with our exotic greeting cards. Send those letters with style.",
+    image: greeting_cards,
   },
   {
-    id: 2,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Feather Banners",
+    price: "4499",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Create remarkable adverts with our banners. Showcase your events with style.",
+    image: feather_banner,
   },
   {
-    id: 3,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Custom Mugs",
+    price: "2499",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Design custom made full colour mugs for events, corporate branding and events purpose.",
+    image: branded_mugs,
   },
   {
-    id: 4,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Calenders",
+    price: "13999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Gift your clients, family and friends calenders and stay on their miind all year round.",
+    image: calendar,
   },
   {
-    id: 5,
-    title: "Branded Envelopes",
+    title: "Business Cards",
     price: "74999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Up your professional game with our exotic business cards. Send those letters with style",
+    image: business_cards,
   },
   {
-    id: 6,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Gift Bags",
+    price: "9999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: gift_bags,
   },
   {
-    id: 7,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Letter Head",
+    price: "3999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: letterhead,
   },
   {
-    id: 8,
-    title: "Branded Envelopes",
+    title: "Magazine",
     price: "74999",
-    description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    description: "Up your professional game with our magazines",
+    image: magazine,
   },
 ];
 
 const popularCategories = [
   {
-    title: "Branded Envelopes",
+    title: "Product Packaging",
     price: "74999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: product_packaging,
   },
   {
-    title: "Branded Envelopes",
+    title: "Rollup Banner",
     price: "74999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: roullup_banner,
   },
   {
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Letter Head",
+    price: "3999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: letterhead,
   },
   {
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Calenders",
+    price: "13999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Gift your clients, family and friends calenders and stay on their miind all year round.",
+    image: calendar,
   },
 ];
 
@@ -110,7 +122,7 @@ const popularCategoriesDisplay = popularCategories.map((products) => {
     <div className="max-w-xs overflow-hidden shadow-lg">
       <img
         className=" h-60 w-full "
-        src={product_img}
+        src={feather_banner}
         alt="Sunset in the mountains"
       />
       <div className="px-6 py-4">
@@ -154,6 +166,7 @@ const HomePage = () => {
                 title={product.title}
                 price={product.price}
                 description={product.description}
+                image={product.image}
               />
             );
           })}
@@ -173,6 +186,7 @@ const HomePage = () => {
                 title={product.title}
                 price={product.price}
                 description={product.description}
+                image={product.image}
               />
             );
           })}
@@ -229,15 +243,16 @@ const HomePage = () => {
       {/* SUBSCRIBE TO NEWS LETTER  */}
       <div className=" mb-20">
         <SectionHeader header="Subscribe to our Newsletter" />
-        <div class="group w-72 md:w-80 lg:w-3/12 mx-auto">
-          <div class="relative flex items-center">
+        <div className="group w-72 md:w-80 lg:w-2/12 mx-auto shadow-xl px-4 py-4">
+          <div className="relative flex items-center">
             <input
               id="8"
-              type="text"
-              class="peer relative h-10 w-full rounded-md bg-gray-50 pl-4 pr-20 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:drop-shadow-lg"
+              type="email"
+              placeholder="Enter your email address here..."
+              className="peer relative h-10 w-full rounded-md text-sm bg-gray-50 pl-3 pr-20 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:drop-shadow-lg"
             />
-            <button class="absolute right-0 h-10 w-16 rounded-r-md bg-blue-200 text-xs font-semibold text-white transition-all duration-200 ease-in-out group-focus-within:bg-blue-400 group-focus-within:hover:bg-blue-600">
-              Send
+            <button className="absolute right-0 h-10 w-20 rounded-r-md bg-blue-200 text-xs font-semibold text-white transition-all duration-200 ease-in-out group-focus-within:bg-blue-400 group-focus-within:hover:bg-blue-600">
+              SUBSCRIBE
             </button>
           </div>
         </div>
