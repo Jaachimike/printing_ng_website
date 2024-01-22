@@ -14,7 +14,7 @@ const Header = () => {
             className="flex title-font font-medium items-center cursor-pointer mb-4 md:mb-0"
             to="/"
           >
-            <img src={Logo} alt="Company Logo" />
+            <img src={Logo} alt="Company Logo" className="h-16" />
           </Link>
           {/* Hamburger Icon  */}
           <button className="lg:hidden" onClick={() => setSidebarOpen(true)}>
