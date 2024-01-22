@@ -76,9 +76,9 @@ const RollupBanners = () => {
       ></div>
       <div className="max-w-7xl mx-auto">
         {/* Product Display */}
-        <div className="grid grid-cols-2  mb-10">
+        <div className="px-5 md:px-0 grid grid-cols-1 md:grid-cols-2 mb-10">
           {/* Product Image */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-16 md:mb-0">
             <img
               src={rollup_banner}
               alt="Product Image"
@@ -145,7 +145,7 @@ const RollupBanners = () => {
               {/* Order Button  */}
               <div>
                 <button className="whitespace-nowrap bg-[#129FF7] px-4 py-2 rounded-xl text-white font-semibold">
-                  Get Started
+                  Order Now
                 </button>
               </div>
             </div>
@@ -153,7 +153,7 @@ const RollupBanners = () => {
         </div>
 
         {/* Product Full Details  */}
-        <div className="grid grid-cols-2 gap-x-14 mb-16">
+        <div className="px-5 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-x-14 mb-16">
           <div>
             <h2 className=" text-[#0064A3] font-bold text-xl mb-4">
               Rollup Banner XL
