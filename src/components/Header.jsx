@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="text-gray-600 bg-[#DFEFFF] body-font">
+      <header className="text-gray-600 bg-[#DFEFFF] body-font h-[10vh]  flex items-center">
         <div className="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
           {/* LOGO  */}
           <Link
