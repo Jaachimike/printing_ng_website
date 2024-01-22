@@ -29,7 +29,7 @@ const Hero = () => {
         {/* Search Bar  */}
 
         <div className="group w-96 md:w-96 lg:w-6/12 mx-auto rounded-full bg-white px-6 py-4">
-          <div className="relative flex items-center">
+          <div className="relative flex items-center shadow-lg">
             <input
               id="8"
               type="email"
