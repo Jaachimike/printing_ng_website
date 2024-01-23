@@ -55,9 +55,9 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link to="careers" className=" hover:text-blue-400">
               Career
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -66,9 +66,9 @@ const Footer = () => {
         <h3 className=" text-lg font-medium mb-4">GET STARTED</h3>
         <ul className="list-unstyled ">
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link to="affiliates" className=" hover:text-blue-400">
               Become an Affiliate
-            </a>
+            </Link>
           </li>
           <li>
             <Link to="login" className="font-bold hover:text-blue-400">
