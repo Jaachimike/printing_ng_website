@@ -5,7 +5,7 @@ import career_image from "../assets/png/careers_page_image.png";
 const Careers = () => {
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="flex space-x-12">
+      <div className="flex space-x-12 mb-28">
         {/* Write-up  */}
         <div className=" ">
           <h2 className="font-bold text-xl mb-5 text-[#0064A3]">
@@ -105,9 +105,9 @@ const Careers = () => {
               </div>
             </div>
 
-            {/* LOGIN BUTTON  */}
-            <div className="flex justify-center">
-              <button className="bg-[#129FF7] px-10 py-2 rounded-xl text-white font-semibold">
+            {/* SUBMIT BUTTON  */}
+            <div className="flex justify-start">
+              <button className="bg-[#129FF7] px-10 py-2 rounded-xl lg:ml-10 mt-8 text-white font-semibold">
                 Submit
               </button>
             </div>
