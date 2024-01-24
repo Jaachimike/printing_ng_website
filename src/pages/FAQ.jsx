@@ -1,6 +1,7 @@
 import React from "react";
 import Faqs from "../components/Faqs";
 import ProductDisplay from "../components/ProductDisplay";
+import PageHeader from "../components/PageHeader";
 import rollup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
 import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
 import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
@@ -69,6 +70,7 @@ const relatedProducts = [
 const FAQ = () => {
   return (
     <div>
+      <PageHeader header="FAQ" />
       {/* FAQ's  */}
       <div className="mb-28 mt-11">
         <h2 className=" text-[#0064A3] font-bold text-center text-xl mb-4">

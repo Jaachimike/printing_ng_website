@@ -1,8 +1,19 @@
 import React from "react";
+import background from "../assets/png/subpage_background.png";
 
 const PrivacyPolicy = () => {
   return (
     <>
+      <div
+        style={{ backgroundImage: `url(${background})` }}
+        className="bg-cover h-[15dvh] text-white"
+      >
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row py-8">
+          <h1 className="text-7xl font-Lobster text-center md:text-left mb-4">
+            Privacy Policy
+          </h1>
+        </div>
+      </div>
       <div className="mt-10 mb-20 max-w-7xl mx-auto px-4 lg:px-0">
         <h2 className="text-center text-[#0064A3] font-bold text-2xl mb-6">
           Website Privacy Policy

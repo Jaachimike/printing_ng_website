@@ -1,36 +1,52 @@
 import About_Image from "../assets/png/About_us_image.png";
 import ProductDisplay from "../components/ProductDisplay";
+import PageHeader from "../components/PageHeader";
+import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
+import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
+import business_cards from "../assets/png/product_images/BUSINESS-CARDS.png";
+import calendar from "../assets/png/product_images/CALENDAR.png";
+import feather_banner from "../assets/png/product_images/FEATHER-BANNER.png";
+import gift_bags from "../assets/png/product_images/GIFT-BAGS.png";
+import letterhead from "../assets/png/product_images/LETTER-HEAD.png";
+import magazine from "../assets/png/product_images/MAGAZINE.png";
+import product_packaging from "../assets/png/product_images/PRODUCT-PACKAGING.png";
+import roullup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
 
 const popularCategories = [
   {
-    title: "Branded Envelopes",
+    title: "Product Packaging",
     price: "74999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: product_packaging,
   },
   {
-    title: "Branded Envelopes",
+    title: "Rollup Banner",
     price: "74999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: roullup_banner,
   },
   {
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Letter Head",
+    price: "3999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: letterhead,
   },
   {
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Calenders",
+    price: "13999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Gift your clients, family and friends calenders and stay on their miind all year round.",
+    image: calendar,
   },
 ];
 
 const AboutUs = () => {
   return (
     <div>
+      <PageHeader header="About Us" />
       <div>
         {/*TOP SECTION*/}
         <div></div>
@@ -116,6 +132,7 @@ const AboutUs = () => {
                   title={product.title}
                   price={product.price}
                   description={product.description}
+                  image={product.image}
                 />
               );
             })}

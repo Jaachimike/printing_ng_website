@@ -158,7 +158,7 @@ const HomePage = () => {
       {/* POPULAR PRODUCTS */}
       <div className="mb-20 mt-8">
         <SectionHeader header="Popular Products" />
-        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
+        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 ">
           {popularProducts.map((product, index) => {
             return (
               <ProductDisplay
@@ -176,7 +176,7 @@ const HomePage = () => {
       {/* POPULAR CATEGORIES */}
       <div className="mb-20 mt-8">
         <SectionHeader header="Popular Categories" />
-        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
+        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-x-8 gap-y-12 ">
           {/* {popularCategoriesDisplay} */}
 
           {popularCategories.map((product, index) => {

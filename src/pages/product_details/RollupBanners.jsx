@@ -1,6 +1,7 @@
 import React from "react";
 import Faqs from "../../components/Faqs";
 import ProductDisplay from "../../components/ProductDisplay";
+import PageHeader from "../../components/PageHeader";
 import background from "../../assets/png/subpage_background.png";
 import rollup_banner from "../../assets/png/product_images/ROLLUP-BANNER.png";
 import greeting_cards from "../../assets/png/product_images/GREETING-CARDS.png";
@@ -70,10 +71,7 @@ const popularCategories = [
 const RollupBanners = () => {
   return (
     <div>
-      <div
-        style={{ backgroundImage: `url(${background})` }}
-        className="bg-cover h-[15dvh] text-white mb-16"
-      ></div>
+      <PageHeader header="Order" />
       <div className="max-w-7xl mx-auto">
         {/* Product Display */}
         <div className="px-5 md:px-0 grid grid-cols-1 md:grid-cols-2 mb-10">

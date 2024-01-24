@@ -1,95 +1,110 @@
 import React from "react";
 import ProductDisplay from "../components/ProductDisplay";
+import PageHeader from "../components/PageHeader";
+import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
+import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
+import business_cards from "../assets/png/product_images/BUSINESS-CARDS.png";
+import calendar from "../assets/png/product_images/CALENDAR.png";
+import feather_banner from "../assets/png/product_images/FEATHER-BANNER.png";
+import gift_bags from "../assets/png/product_images/GIFT-BAGS.png";
+import letterhead from "../assets/png/product_images/LETTER-HEAD.png";
+import magazine from "../assets/png/product_images/MAGAZINE.png";
+import product_packaging from "../assets/png/product_images/PRODUCT-PACKAGING.png";
+import roullup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
 
 const allProducts = [
   {
-    id: 1,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Greeting Cards",
+    price: "9999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Up your professional game with our exotic greeting cards. Send those letters with style.",
+    image: greeting_cards,
   },
   {
-    id: 2,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Feather Banners",
+    price: "4499",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Create remarkable adverts with our banners. Showcase your events with style.",
+    image: feather_banner,
   },
   {
-    id: 3,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Custom Mugs",
+    price: "2499",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Design custom made full colour mugs for events, corporate branding and events purpose.",
+    image: branded_mugs,
   },
   {
-    id: 4,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Calenders",
+    price: "13999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Gift your clients, family and friends calenders and stay on their miind all year round.",
+    image: calendar,
   },
   {
-    id: 5,
-    title: "Branded Envelopes",
+    title: "Business Cards",
     price: "74999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Up your professional game with our exotic business cards. Send those letters with style",
+    image: business_cards,
   },
   {
-    id: 6,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Gift Bags",
+    price: "9999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: gift_bags,
   },
   {
-    id: 7,
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Letter Head",
+    price: "3999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: letterhead,
   },
   {
-    id: 8,
-    title: "Branded Envelopes",
+    title: "Magazine",
     price: "74999",
-    description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    description: "Up your professional game with our magazines",
+    image: magazine,
   },
 ];
 
 const popularCategories = [
   {
-    title: "Branded Envelopes",
+    title: "Product Packaging",
     price: "74999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: product_packaging,
   },
   {
-    title: "Branded Envelopes",
+    title: "Rollup Banner",
     price: "74999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: roullup_banner,
   },
   {
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Letter Head",
+    price: "3999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: letterhead,
   },
   {
-    title: "Branded Envelopes",
-    price: "74999",
+    title: "Calenders",
+    price: "13999",
     description:
-      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+      "Gift your clients, family and friends calenders and stay on their miind all year round.",
+    image: calendar,
   },
 ];
 
 const Products = () => {
   return (
     <>
+      <PageHeader header="All Products" />
       <div className=" max-w-7xl mx-auto mb-20">
         <div className="flex justify-around py-10 rounded-3xl bg-[#EAF7FF] text-[#006EB3] font-bold">
           {/*COLUMN 1*/}
@@ -137,6 +152,7 @@ const Products = () => {
                 title={product.title}
                 price={product.price}
                 description={product.description}
+                image={product.image}
               />
             );
           })}
@@ -156,6 +172,7 @@ const Products = () => {
                 title={product.title}
                 price={product.price}
                 description={product.description}
+                image={product.image}
               />
             );
           })}
