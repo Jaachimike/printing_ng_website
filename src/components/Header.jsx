@@ -41,9 +41,13 @@ const Header = () => {
               >
                 All Products
               </Link>
-              <a className="mr-5 hover:text-blue-400 cursor-pointer">
+
+              <Link
+                to="affiliates"
+                className="mr-5 hover:text-blue-400 cursor-pointer"
+              >
                 Become an Affiliate
-              </a>
+              </Link>
             </nav>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0 mr-4">
               <Link to="login">Login</Link>
@@ -69,14 +73,13 @@ const Header = () => {
               >
                 All Products
               </Link>
-              <a className="mr-5 hover:text-blue-400 mt-4 cursor-pointer">
-                <Link
-                  to="affiliates"
-                  className=" hover:text-blue-400 cursor-pointer"
-                >
-                  Become an Affiliate
-                </Link>
-              </a>
+
+              <Link
+                to="affiliates"
+                className="mr-5 hover:text-blue-400 mt-4 cursor-pointer"
+              >
+                Become an Affiliate
+              </Link>
             </nav>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1  focus:outline-none  rounded text-base mt-4 ">
               <Link to="login">Login</Link>
