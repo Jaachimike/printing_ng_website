@@ -6,6 +6,13 @@ import linkedin from "../assets/svg/linkedin_logo.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: adds a smooth scroll animation
+    });
+  };
+
   return (
     <footer className="bg-[#DFEFFF] py-8 pl-8 lg:pl-16 flex flex-col items-start md:flex-row md:justify-between md:items-start *:mb-6">
       {/* 1st column  */}
@@ -35,27 +42,47 @@ const Footer = () => {
         <h3 className=" text-lg font-medium mb-4">PRINTINGNG</h3>
         <ul className="list-unstyled ">
           <li>
-            <Link className="hover:text-blue-400" to="about">
+            <Link
+              className="hover:text-blue-400"
+              to="about"
+              onClick={scrollToTop}
+            >
               About Us
             </Link>
           </li>
           <li>
-            <Link className="hover:text-blue-400" to="contact">
+            <Link
+              className="hover:text-blue-400"
+              to="contact"
+              onClick={scrollToTop}
+            >
               Contact
             </Link>
           </li>
           <li>
-            <Link className="hover:text-blue-400" to="track">
+            <Link
+              className="hover:text-blue-400"
+              to="track"
+              onClick={scrollToTop}
+            >
               Track Order
             </Link>
           </li>
           <li>
-            <Link className="hover:text-blue-400" to="blog">
+            <Link
+              className="hover:text-blue-400"
+              to="blog"
+              onClick={scrollToTop}
+            >
               Blog
             </Link>
           </li>
           <li>
-            <Link to="careers" className=" hover:text-blue-400">
+            <Link
+              to="careers"
+              className=" hover:text-blue-400"
+              onClick={scrollToTop}
+            >
               Career
             </Link>
           </li>
@@ -66,17 +93,29 @@ const Footer = () => {
         <h3 className=" text-lg font-medium mb-4">GET STARTED</h3>
         <ul className="list-unstyled ">
           <li>
-            <Link to="affiliates" className=" hover:text-blue-400">
+            <Link
+              to="affiliates"
+              className=" hover:text-blue-400"
+              onClick={scrollToTop}
+            >
               Become an Affiliate
             </Link>
           </li>
           <li>
-            <Link to="login" className="font-bold hover:text-blue-400">
+            <Link
+              to="login"
+              className="font-bold hover:text-blue-400"
+              onClick={scrollToTop}
+            >
               Login
             </Link>
           </li>
           <li>
-            <Link to="signup" className="font-bold hover:text-blue-400">
+            <Link
+              to="signup"
+              className="font-bold hover:text-blue-400"
+              onClick={scrollToTop}
+            >
               SignUp
             </Link>
           </li>
@@ -87,12 +126,20 @@ const Footer = () => {
         <h3 className=" text-lg font-medium mb-4">INFORMATION</h3>
         <ul className="list-unstyled ">
           <li>
-            <Link className="hover:text-blue-400" to="privacy_policy">
+            <Link
+              className="hover:text-blue-400"
+              to="privacy_policy"
+              onClick={scrollToTop}
+            >
               Privacy Policy
             </Link>
           </li>
           <li>
-            <Link className="hover:text-blue-400" to="terms_conditions">
+            <Link
+              className="hover:text-blue-400"
+              to="terms_conditions"
+              onClick={scrollToTop}
+            >
               Terms & Conditions
             </Link>
           </li>

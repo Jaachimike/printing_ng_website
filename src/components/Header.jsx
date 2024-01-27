@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: adds a smooth scroll animation
+    });
+  };
+
   return (
     <div>
       <header className="text-gray-600 bg-[#DFEFFF] body-font h-[10vh] py-8 flex items-center">
@@ -13,6 +20,7 @@ const Header = () => {
           <Link
             className="flex title-font font-medium items-center cursor-pointer mb-4 md:mb-0"
             to="/"
+            onClick={scrollToTop}
           >
             <img src={Logo} alt="Company Logo" className="h-16" />
           </Link>
@@ -38,6 +46,7 @@ const Header = () => {
               <Link
                 className="mr-5 hover:text-blue-400 cursor-pointer"
                 to="products"
+                onClick={scrollToTop}
               >
                 All Products
               </Link>
@@ -45,15 +54,20 @@ const Header = () => {
               <Link
                 to="affiliates"
                 className="mr-5 hover:text-blue-400 cursor-pointer"
+                onClick={scrollToTop}
               >
                 Become an Affiliate
               </Link>
             </nav>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0 mr-4">
-              <Link to="login">Login</Link>
+              <Link to="login" onClick={scrollToTop}>
+                Login
+              </Link>
             </button>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0">
-              <Link to="signup">SignUp</Link>
+              <Link to="signup" onClick={scrollToTop}>
+                SignUp
+              </Link>
             </button>
           </div>
         </div>
@@ -70,6 +84,7 @@ const Header = () => {
               <Link
                 className="mr-5 hover:text-blue-400 cursor-pointer"
                 to="products"
+                onClick={scrollToTop}
               >
                 All Products
               </Link>
@@ -77,15 +92,20 @@ const Header = () => {
               <Link
                 to="affiliates"
                 className="mr-5 hover:text-blue-400 mt-4 cursor-pointer"
+                onClick={scrollToTop}
               >
                 Become an Affiliate
               </Link>
             </nav>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1  focus:outline-none  rounded text-base mt-4 ">
-              <Link to="login">Login</Link>
+              <Link to="login" onClick={scrollToTop}>
+                Login
+              </Link>
             </button>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 focus:outline-none  rounded text-base mt-4 ">
-              <Link to="signup">SignUp</Link>
+              <Link to="signup" onClick={scrollToTop}>
+                SignUp
+              </Link>
             </button>
           </div>
           <button
