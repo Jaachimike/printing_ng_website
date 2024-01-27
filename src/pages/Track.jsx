@@ -1,6 +1,49 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import arrow from "../assets/png/right-arrow.png";
+import ProductDisplay from "../components/ProductDisplay";
+
+import rollup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
+import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
+import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
+import business_cards from "../assets/png/product_images/BUSINESS-CARDS.png";
+import calendar from "../assets/png/product_images/CALENDAR.png";
+import feather_banner from "../assets/png/product_images/FEATHER-BANNER.png";
+import gift_bags from "../assets/png/product_images/GIFT-BAGS.png";
+import letterhead from "../assets/png/product_images/LETTER-HEAD.png";
+import magazine from "../assets/png/product_images/MAGAZINE.png";
+import product_packaging from "../assets/png/product_images/PRODUCT-PACKAGING.png";
+
+const popularCategories = [
+  {
+    title: "Product Packaging",
+    price: "74999",
+    description:
+      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: product_packaging,
+  },
+  {
+    title: "Rollup Banner",
+    price: "74999",
+    description:
+      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: rollup_banner,
+  },
+  {
+    title: "Letter Head",
+    price: "3999",
+    description:
+      "Up your professional game with our exotic branded envelopes. Send those letters with style",
+    image: letterhead,
+  },
+  {
+    title: "Calenders",
+    price: "13999",
+    description:
+      "Gift your clients, family and friends calenders and stay on their miind all year round.",
+    image: calendar,
+  },
+];
 
 const Track = () => {
   return (
@@ -45,77 +88,144 @@ const Track = () => {
         </div>
 
         {/* TRACKING STATUS AND SCHEDULE */}
-        <div>
+        <div className="mb-16">
           <h2 className="font-bold text-xl text-center mb-4 text-[#0064A3]">
             Tracking Status & Schedule
           </h2>
-          <div className="flex flex-col items-center gap-9">
-            {/* Order Placed  */}
-            <div className=" flex items-center">
-              <div className="grid grid-cols-3 place-items-center">
-                <p className="font-bold text-xl">Order Placed</p>
-                <img src={arrow} alt="arrow svg" className="h-8" />
-                <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
-                  1
-                </div>
-              </div>
+          <div></div>
+          <table className=" max-w-7xl mx-auto">
+            <tbody className="">
+              {/* Order Placed */}
+              <tr className=" *:pb-10 *:pr-10">
+                <td>
+                  <p className="font-bold text-xl">Order Placed</p>
+                </td>
+                <td>
+                  <img src={arrow} alt="arrow svg" className="h-8" />
+                </td>
+                <td>
+                  <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
+                    1
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <p>Order has been placed by customer</p>
+                    <p className="font-bold">@11:30am | Tue | Nov, 2024</p>
+                  </div>
+                </td>
+              </tr>
+              {/* Order Processing */}
+              <tr className="*:pb-10 *:pr-10">
+                <td>
+                  <p className="font-bold text-xl">Order Processing</p>
+                </td>
+                <td>
+                  <img src={arrow} alt="arrow svg" className="h-8" />
+                </td>
+                <td>
+                  <div className="rounded-full bg-[#FF8C22] text-[#FF8C22] w-fit px-6 py-4 border-4 border-[#0064A3] ">
+                    1
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <p>
+                      Order is being Processed by the Printin.ng Order
+                      Processing Unit.
+                    </p>
+                    <p className="font-bold">@11:30am | Wed | Nov, 2024</p>
+                  </div>
+                </td>
+              </tr>
+              {/* Order in Transit */}
+              <tr className="*:pb-10 *:pr-10">
+                <td>
+                  <p className="font-bold text-xl">Order in Transit</p>
+                </td>
+                <td>
+                  <img src={arrow} alt="arrow svg" className="h-8" />
+                </td>
+                <td>
+                  <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
+                    1
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <p>Order now in transit for delivery</p>
+                    <p className="font-bold">@ --</p>
+                  </div>
+                </td>
+              </tr>
+              {/* Order Delivered */}
+              <tr className="*:pb-10 *:pr-10">
+                <td>
+                  <p className="font-bold text-xl">Order Delivered</p>
+                </td>
+                <td>
+                  <img src={arrow} alt="arrow svg" className="h-8" />
+                </td>
+                <td>
+                  <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
+                    1
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <p>Order delivered to customer</p>
+                    <p className="font-bold">@--</p>
+                  </div>
+                </td>
+              </tr>
+              {/* Order Completed */}
+              <tr className="*:pb-10 *:pr-10">
+                <td>
+                  <p className="font-bold text-xl">Order Completed</p>
+                </td>
+                <td>
+                  <img src={arrow} alt="arrow svg" className="h-8" />
+                </td>
+                <td>
+                  <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
+                    1
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <p>Order Completed</p>
+                    <p className="font-bold">@--</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-              <div>
-                <p>Order has been placed by customer</p>
-                <p className="font-bold">@11:30am | Tue | Nov, 2024</p>
-              </div>
+          <div className="flex space-x-3 items-center lg:ml-10">
+            <div className=" rounded-full bg-[#FF8C22] text-[#FF8C22] w-fit px-4 py-2 border-4 border-[#0064A3] ">
+              1
             </div>
-            {/* Order Processing  */}
-            <div className=" flex items-center">
-              <div className="grid grid-cols-3 place-items-center">
-                <p className="font-bold text-xl block">Order Processing</p>
-                <img src={arrow} alt="arrow svg" className="h-8 block" />
-                <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
-                  1
-                </div>
-              </div>
+            <p>Orange means your order is in the current stage</p>
+          </div>
+        </div>
 
-              <div>
-                <p>Order has been placed by customer</p>
-                <p className="font-bold">@11:30am | Tue | Nov, 2024</p>
-              </div>
-            </div>
-            {/* Order In Transit  */}
-            <div className=" flex items-center ">
-              <p className="font-bold text-xl">Order In Transit</p>
-              <img src={arrow} alt="arrow svg" className="h-8" />
-              <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
-                1
-              </div>
-              <div>
-                <p>Order has been placed by customer</p>
-                <p className="font-bold">@11:30am | Tue | Nov, 2024</p>
-              </div>
-            </div>
-            {/* Order Delivered  */}
-            <div className=" flex items-center ">
-              <p className="font-bold text-xl">Order Delivered</p>
-              <img src={arrow} alt="arrow svg" className="h-8" />
-              <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
-                1
-              </div>
-              <div>
-                <p>Order has been placed by customer</p>
-                <p className="font-bold">@11:30am | Tue | Nov, 2024</p>
-              </div>
-            </div>
-            {/* Order Completed  */}
-            <div className=" flex items-center ">
-              <p className="font-bold text-xl"> Order Completed</p>
-              <img src={arrow} alt="arrow svg" className="h-8" />
-              <div className="rounded-full bg-[#CAEFFF] text-[#CAEFFF] w-fit px-6 py-4 border-4 border-[#0064A3] ">
-                1
-              </div>
-              <div>
-                <p>Order has been placed by customer</p>
-                <p className="font-bold">@11:30am | Tue | Nov, 2024</p>
-              </div>
-            </div>
+        {/* Popular Categories */}
+        <div className="mb-20">
+          <h2 className=" text-[#0064A3] font-bold text-center text-xl mb-4">
+            Popular Categories
+          </h2>
+          <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
+            {popularCategories.map((product, index) => {
+              return (
+                <ProductDisplay
+                  key={index}
+                  title={product.title}
+                  price={product.price}
+                  description={product.description}
+                  image={product.image}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

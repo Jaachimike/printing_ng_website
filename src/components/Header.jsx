@@ -70,7 +70,12 @@ const Header = () => {
                 All Products
               </Link>
               <a className="mr-5 hover:text-blue-400 mt-4 cursor-pointer">
-                Become an Affiliate
+                <Link
+                  to="affiliates"
+                  className=" hover:text-blue-400 cursor-pointer"
+                >
+                  Become an Affiliate
+                </Link>
               </a>
             </nav>
             <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1  focus:outline-none  rounded text-base mt-4 ">
