@@ -14,6 +14,8 @@ import RollupBanners from "./pages/product_details/RollupBanners.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Affiliates from "./pages/Affiliates.jsx";
 import Careers from "./pages/Careers.jsx";
+import Contact from "./pages/Contact.jsx";
+import Track from "./pages/Track.jsx";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="products" element={<Products />}></Route>
         <Route path="faq" element={<FAQ />} />
         <Route path="careers" element={<Careers />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="track" element={<Track />} />
         <Route path="affiliates" element={<Affiliates />} />
         <Route path="privacy_policy" element={<PrivacyPolicy />} />
         <Route path="terms_conditions" element={<TermsAndConditions />} />

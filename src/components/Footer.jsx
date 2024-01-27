@@ -40,14 +40,14 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link className="hover:text-blue-400" to="contact">
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-400">
+            <Link className="hover:text-blue-400" to="track">
               Track Order
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="hover:text-blue-400">
