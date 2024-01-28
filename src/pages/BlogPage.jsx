@@ -1,11 +1,7 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
-import header_image from "../assets/png/Blog-header-image.png";
-import blog_image_1 from "../assets/png/blog_images/blog-shoe.png";
-import blog_image_2 from "../assets/png/blog_images/blog-color.png";
-import blog_image_3 from "../assets/png/blog_images/blog-logo.png";
-import blog_image_4 from "../assets/png/blog_images/blog-image-4.png";
 import ProductDisplay from "../components/ProductDisplay";
+import blog_image from "../assets/png/blog_post_images/blog-post-shoe.png";
 import rollup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
 import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
 import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
@@ -16,33 +12,6 @@ import gift_bags from "../assets/png/product_images/GIFT-BAGS.png";
 import letterhead from "../assets/png/product_images/LETTER-HEAD.png";
 import magazine from "../assets/png/product_images/MAGAZINE.png";
 import product_packaging from "../assets/png/product_images/PRODUCT-PACKAGING.png";
-
-const blogPosts = [
-  {
-    image: blog_image_1,
-    title: "Branding your Product",
-    description:
-      "Track your print order without hassles Easily track the status your Printivo order using your order number and see step by step ...",
-  },
-  {
-    image: blog_image_2,
-    title: "All about colours in printing",
-    description:
-      "Track your print order without hassles Easily track the status your Printivo order using your order number and see step by step ...",
-  },
-  {
-    image: blog_image_3,
-    title: "End of the year giveaways",
-    description:
-      "Track your print order without hassles Easily track the status your Printivo order using your order number and see step by step ...",
-  },
-  {
-    image: blog_image_4,
-    title: "Printing Documents",
-    description:
-      "Track your print order without hassles Easily track the status your Printivo order using your order number and see step by step ...",
-  },
-];
 
 const popularCategories = [
   {
@@ -75,43 +44,35 @@ const popularCategories = [
   },
 ];
 
-const BlogPostOutline = ({ image, title, description }) => {
+const BlogPage = () => {
   return (
-    <div className="flex items-center space-x-6 px-8 mb-8">
-      {/* image  */}
-      <div>
-        <img src={image} alt="blog image" className="" />
-      </div>
-
-      {/* short description */}
-      <div>
-        <h3 className="font-bold text-xl mb-3">{title}</h3>
-        <p className="mb-2 w-10/12">{description}</p>
-        <p className="font-bold">Read more...</p>
-      </div>
-    </div>
-  );
-};
-
-const Blog = () => {
-  return (
-    <>
-      <PageHeader header="Blog" className="" />
+    <div>
+      <PageHeader header="Blog..." />
       <div className="max-w-7xl mx-auto">
-        <img src={header_image} className="mt-[-30px] h-46 w-full mb-10" />
+        <h2 className="text-[#0064A3] font-bold text-5xl mb-5">
+          Branding your products
+        </h2>
         <div className="grid grid-cols-3 gap-4 mb-20">
-          {/* Blog List  */}
-          <div className="col-span-2 bg-[#E9F8FE] py-12 rounded-xl shadow-lg">
-            {blogPosts.map((blog, index) => {
-              return (
-                <BlogPostOutline
-                  key={index}
-                  image={blog.image}
-                  title={blog.title}
-                  description={blog.description}
-                />
-              );
-            })}
+          {/* Blog Description  */}
+          <div className="col-span-2 bg-[#E9F8FE] pt-8 pb-28 px-8 rounded-xl shadow-lg">
+            <img src={blog_image} alt="blog image" />
+            <span className=" font-semibold">
+              Printin.ng | 15th Nov, 2023 | 10:33 AM
+            </span>
+
+            <h3 className="mt-8 font-bold">Colour Selection</h3>
+            <p>
+              Your message must be bold enough for one to see and grasp. So,
+              whether it's a sale, an exhibition, a product or service you are
+              advertising, your design fonts must be legible. Most especially,
+              your copy or keyword must be designed in a large font. You can go
+              artistic with your font but not overboard
+            </p>
+            <h3 className="mt-8 font-bold">Sticker Designs</h3>
+            <p>
+              Your message must be bold enough for one to see and grasp. So
+              whetyher it's a sale, an exhibition, a product or service
+            </p>
           </div>
           {/* Search Bar */}
           <div className=" bg-[#E9F8FE] py-12 rounded-xl shadow-lg">
@@ -132,16 +93,12 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          {/* Read More Button  */}
-          <div className="col-span-2 bg-[#2F2F2F] py-2 rounded-full flex justify-center text-white">
-            Read More...
-          </div>
         </div>
 
         {/* Popular Categories */}
         <div className="mb-20">
           <h2 className=" text-[#0064A3] font-bold text-center text-xl mb-4">
-            Popular Categories
+            Related Posts
           </h2>
           <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
             {popularCategories.map((product, index) => {
@@ -158,25 +115,8 @@ const Blog = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Blog;
-
-{
-  /* <div className="flex space-x-6 px-8">
-
-  <img src={blog_image_1} alt="blog image" className="" />
-
-
-  <div>
-    <h3 className="font-bold text-xl mb-3">Branding your Product</h3>
-    <p className="mb-2 w-8/12">
-      Track your print order without hassles Easily track the status your
-      Printivo order using your order number and see step by step ...
-    </p>
-    <p className="font-bold">Read more...</p>
-  </div>
-</div>; */
-}
+export default BlogPage;

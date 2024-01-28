@@ -17,6 +17,7 @@ import Careers from "./pages/Careers.jsx";
 import Contact from "./pages/Contact.jsx";
 import Track from "./pages/Track.jsx";
 import Blog from "./pages/Blog.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="track" element={<Track />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="blog_page" element={<BlogPage />} />
         <Route path="affiliates" element={<Affiliates />} />
         <Route path="privacy_policy" element={<PrivacyPolicy />} />
         <Route path="terms_conditions" element={<TermsAndConditions />} />
