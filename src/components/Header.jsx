@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Logo from "../assets/svg/Printin logo.svg";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -14,7 +14,13 @@ const Header = () => {
 
   return (
     <div>
-      <header className="text-gray-600 bg-[#DFEFFF] body-font h-[10vh] py-8 flex items-center">
+      <header className="text-gray-600 max-w-[1500px] mx-auto bg-[#DFEFFF] body-font h-[10vh] py-8 flex items-center">
+        <div className=" bg-white flex justify-end">
+          <div>
+            {/* call number */}
+            <div></div>
+          </div>
+        </div>
         <div className="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
           {/* LOGO  */}
           <Link
@@ -59,12 +65,12 @@ const Header = () => {
                 Become an Affiliate
               </Link>
             </nav>
-            <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0 mr-4">
+            <button className="font-bold  hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0 mr-4">
               <Link to="login" onClick={scrollToTop}>
                 Login
               </Link>
             </button>
-            <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0">
+            <button className="font-bold  hover:text-blue-400 inline-flex items-center  border-0 py-1 px-3 focus:outline-none  rounded text-base mt-4 md:mt-0">
               <Link to="signup" onClick={scrollToTop}>
                 SignUp
               </Link>
@@ -97,12 +103,12 @@ const Header = () => {
                 Become an Affiliate
               </Link>
             </nav>
-            <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1  focus:outline-none  rounded text-base mt-4 ">
+            <button className="font-bold  hover:text-blue-400 inline-flex items-center  border-0 py-1  focus:outline-none  rounded text-base mt-4 ">
               <Link to="login" onClick={scrollToTop}>
                 Login
               </Link>
             </button>
-            <button className="font-bold hover:font-normal hover:text-blue-400 inline-flex items-center  border-0 py-1 focus:outline-none  rounded text-base mt-4 ">
+            <button className="font-bold  hover:text-blue-400 inline-flex items-center  border-0 py-1 focus:outline-none  rounded text-base mt-4 ">
               <Link to="signup" onClick={scrollToTop}>
                 SignUp
               </Link>
