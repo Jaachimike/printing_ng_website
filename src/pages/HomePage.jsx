@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Hero from "../sections/Hero";
+import {Link} from "react-router-dom";
 import ProductDisplay from "../components/ProductDisplay";
 import speedometer from "../assets/svg/speedometer_icon.svg";
 import quality from "../assets/svg/quality_icon.svg";
@@ -18,7 +19,7 @@ import roullup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
 
 const SectionHeader = (props) => {
   return (
-    <div className="flex justify-center text-2xl font-bold text-[#0064A3] mb-7">
+    <div className="flex justify-center text-2xl font-bold text-[#0064A3] ">
       <h3>{props.header}</h3>
     </div>
   );
@@ -156,8 +157,13 @@ const HomePage = () => {
     <div>
       <Hero />
       {/* POPULAR PRODUCTS */}
-      <div className="mb-20 mt-8">
-        <SectionHeader header="Popular Products" />
+      <div className="mb-20 mt-8 ">
+        <div className="flex justify-between mb-7 items-center mx-auto max-w-7xl">
+          <SectionHeader header="Popular Products" />
+          <p className="duration-500 hover:scale-105">
+            <Link to="/products">See All Products</Link>
+          </p>
+        </div>
         <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 ">
           {popularProducts.map((product, index) => {
             return (
@@ -175,7 +181,13 @@ const HomePage = () => {
 
       {/* POPULAR CATEGORIES */}
       <div className="mb-20 mt-8">
-        <SectionHeader header="Popular Categories" />
+        <div className="flex justify-between mb-7 items-center mx-auto max-w-7xl">
+          <SectionHeader header="Popular Categories" />
+          <p className="duration-500 hover:scale-105">
+            <Link to="/products">See All Products</Link>
+          </p>
+        </div>
+
         <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-x-8 gap-y-12 ">
           {/* {popularCategoriesDisplay} */}
 
@@ -193,9 +205,22 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* OUR CLIENTS */}
+      <div className=" mx-auto max-w-7xl">
+        <p className="font-bold text-4xl">Nigeria's No. 1 online print shop</p>
+        <p className="text-[#706D6D] text-2xl">
+          Our print services and solutions are tusted by these brands and <br />
+          over 15,000 other businesses in Nigeria
+        </p>
+        <div></div>
+      </div>
+
       {/* FEATURES  */}
       <div className="mb-20">
-        <SectionHeader header="Features" />
+        <div className="mb-7">
+          <SectionHeader header="Features" />
+        </div>
+
         <div className=" mx-auto max-w-7xl flex flex-col md:flex-row justify-center">
           <div className=" bg-[#E9F8FE] mx-10 md:mx-0 mb-6 md:mb-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
             {/* Speed  */}
@@ -238,11 +263,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* OUR CLIENTS */}
-
       {/* SUBSCRIBE TO NEWS LETTER  */}
-      <div className=" mb-20">
-        <SectionHeader header="Subscribe to our Newsletter" />
+      {/* <div className=" mb-20">
+        <div className="mb-7">
+          <SectionHeader header="Subscribe to our Newsletter" />
+        </div>
+
         <div className="group w-72 md:w-80 lg:w-3/12 mx-auto shadow-xl px-4 py-4">
           <div className="relative flex items-center">
             <input
@@ -256,29 +282,7 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        {/* <div className="bg-white flex justify-center">
-          <form
-            onSubmit={handleSubmit}
-            className="flex items-center shadow-lg  py-3 px-10  "
-          >
-            <div className="shadow-lg flex ">
-              <input
-                type="text"
-                placeholder="Enter your email address here ..."
-                value={searchTerm}
-                onChange={handleChange}
-                className=" pl-3 py-5 rounded-l-md focus:outline-none w-64"
-              ></input>
-              <button
-                type="submit"
-                className=" text-white px-4 py-3 rounded-r-md bg-blue-300 "
-              >
-                SUBSCRIBE
-              </button>
-            </div>
-          </form>
-        </div> */}
-      </div>
+      </div> */}
     </div>
   );
 };

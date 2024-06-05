@@ -1,12 +1,13 @@
 import product_img from "../assets/jpeg/product_image.jpg";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
-import arrow from "../assets/svg/right-arrow-svg.svg";
+import arrow from "../assets/svg/right-arrow-black-svg .svg";
 
 const defaultProps = {
   title: "Title.",
   price: "10",
   description: "",
+  moq: "100",
 };
 
 const propTypes = {
@@ -15,26 +16,32 @@ const propTypes = {
   description: PropTypes.string,
 };
 
-const ProductDisplay = ({ title, price, description, image }) => {
+const ProductDisplay = ({title, price, description, image, moq}) => {
   return (
     <Link to="/rollup_banner">
-      <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+      <div className=" bg-white w-80 shadow-md hover:shadow-xl">
         <a href="#">
           <img
             src={image}
             alt="Product Image"
-            class="h-80 w-72 object-cover rounded-t-xl"
+            className="h-80  object-cover  duration-500 hover:scale-105"
           />
-          <div class="px-4 py-3 w-72">
-            <p class="text-lg font-bold text-black truncate block capitalize">
+          <div className="px-4 py-3 ">
+            <p className="text-xl mb-4 font-bold text-black truncate block capitalize">
               {title}
             </p>
-            <p class="text-gray-400 mb-3 text-xs">Starting at &#8358;{price}</p>
-            <p class="text-gray-400 text-xs mb-6">{description}</p>
+            <p className="text-gray-400 mb-2">Starting at</p>
+            <p className="font-bold text-gray-400 mb-7">
+              <span className="text-xl font-bold  text-black">
+                &#8358;{price}
+              </span>{" "}
+              per {moq}
+            </p>
+            {/* <p className="text-gray-400 text-xs mb-6">{description}</p> */}
 
-            <div className="text-[#e03984] font-semibold flex items-center justify-center ">
-              <p>Order Now</p>
-              <img src={arrow} alt="right arrow" className="h-6" />
+            <div className="duration-500 hover:scale-105 font-semibold flex items-center py-3 px-2 bg-[#DFEFFF] w-fit">
+              <p>Browse {title}</p>
+              <img src={arrow} alt="right arrow" className="h-6 ml-4" />
             </div>
           </div>
         </a>
