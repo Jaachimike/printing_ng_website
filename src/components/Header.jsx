@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="text-gray-600 max-w-[1500px] mx-auto bg-[#DFEFFF] body-font h-[10vh] py-8 flex items-center">
+      <header className="text-gray-600 max-w-7xl mx-auto bg-[#DFEFFF] body-font h-[10vh] py-8 flex items-center">
         <div className=" bg-white flex justify-end">
           <div>
             {/* call number */}

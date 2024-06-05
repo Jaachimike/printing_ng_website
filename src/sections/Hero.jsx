@@ -6,8 +6,8 @@ import SearchBar from "../components/SearchBar";
 const Hero = () => {
   return (
     <div
-      style={{backgroundImage: `url(${background})`}}
-      className="bg-cover max-w-[1500px] mx-auto bg-[#DFEFFF] pb-40  text-[#394B63]"
+      // style={{backgroundImage: `url(${background})`}}
+      className="bg-cover max-w-7xl mx-auto bg-[#DFEFFF] pb-40  text-[#394B63]"
     >
       <div className=" flex flex-col items-center md:items-start ">
         {/* Write-up  */}
