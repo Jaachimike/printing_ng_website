@@ -2,9 +2,7 @@ import React, {useState} from "react";
 import Hero from "../sections/Hero";
 import {Link} from "react-router-dom";
 import ProductDisplay from "../components/ProductDisplay";
-import speedometer from "../assets/svg/speedometer_icon.svg";
-import quality from "../assets/svg/quality_icon.svg";
-import affordability from "../assets/svg/money_icon.svg";
+
 import SearchBar from "../components/SearchBar";
 import greeting_cards from "../assets/png/product_images/GREETING-CARDS.png";
 import branded_mugs from "../assets/png/product_images/BRANDED-MUGS.png";
@@ -16,6 +14,9 @@ import letterhead from "../assets/png/product_images/LETTER-HEAD.png";
 import magazine from "../assets/png/product_images/MAGAZINE.png";
 import product_packaging from "../assets/png/product_images/PRODUCT-PACKAGING.png";
 import roullup_banner from "../assets/png/product_images/ROLLUP-BANNER.png";
+import clientLogos from "../utils/importClientLogos";
+import twitterLogo from "../assets/svg/social-media-icons/twitter-logo-2429.svg";
+import {Features} from "../sections/Features";
 
 const SectionHeader = (props) => {
   return (
@@ -118,6 +119,27 @@ const popularCategories = [
   },
 ];
 
+const testimonials = [
+  {
+    fullName: "Amina Ebele",
+    username: "@DeliciousAmina",
+    comment:
+      "I am now the unofficial @Printivo ambassador. What these guys just pulled to ensure I got my menu cards today is stunning!",
+  },
+  {
+    fullName: "Oluwatosin",
+    username: "@tosingirlfx",
+    comment:
+      "@Printivo delivered my mugs in 24hrs. Thank you so much! It's nice doing business with you. More to come.",
+  },
+  {
+    fullName: "Oluwatosin",
+    username: "@DeliciousAmina",
+    comment:
+      "These guys @Printivo are really awesome and affordable. Excellent customer service and delivery too. Thank you.",
+  },
+];
+
 const popularCategoriesDisplay = popularCategories.map((products) => {
   return (
     <div className="max-w-xs overflow-hidden shadow-lg">
@@ -206,62 +228,53 @@ const HomePage = () => {
       </div>
 
       {/* OUR CLIENTS */}
-      <div className=" mx-auto max-w-7xl">
+      <div className=" mx-auto max-w-7xl mb-16">
         <p className="font-bold text-4xl">Nigeria's No. 1 online print shop</p>
-        <p className="text-[#706D6D] text-2xl">
+        <p className="text-[#706D6D] text-2xl mb-7">
           Our print services and solutions are tusted by these brands and <br />
           over 15,000 other businesses in Nigeria
         </p>
-        <div></div>
+        <div className=" flex  space-x-4">
+          {clientLogos.map((clientLogo, index) => (
+            <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src={clientLogo}
+                alt={`Photo ${index + 1}`}
+                className="w-auto h-9 object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* TESTIMONIAL */}
+      <div className="mx-auto max-w-7xl bg-[#EDF6FD] px-16 py-8 mb-16">
+        <div>
+          <h2 className="text-3xl font-bold mb-8">
+            What Customers Say About Us
+          </h2>
+          <div className="flex space-x-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white px-5 py-6 flex space-x-5 shadow-md"
+              >
+                <img src={twitterLogo} alt="" className="h-5" />
+                <div>
+                  <div className="flex space-x-4 mb-4">
+                    <p className="font-bold">{testimonial.fullName}</p>
+                    <p className="text-[#41AEF4]">{testimonial.username}</p>
+                  </div>
+                  <p>{testimonial.comment}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* FEATURES  */}
-      <div className="mb-20">
-        <div className="mb-7">
-          <SectionHeader header="Features" />
-        </div>
-
-        <div className=" mx-auto max-w-7xl flex flex-col md:flex-row justify-center">
-          <div className=" bg-[#E9F8FE] mx-10 md:mx-0 mb-6 md:mb-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
-            {/* Speed  */}
-            <div className=" flex items-center">
-              <img srcSet={speedometer} alt="" className=" h-24" />
-              <h3 className="pt-7 font-bold text-[#706D6D] text-2xl ">SPEED</h3>
-            </div>
-            <p className=" pl-8">
-              Get your order within 3 - 7 <br /> Working days after placement.
-            </p>
-          </div>
-
-          <div className=" bg-[#E9F8FE] mx-10 mb-6 md:mb-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
-            {/* Quality  */}
-            <div className=" flex items-center">
-              <img src={quality} alt="" className=" h-24" />
-              <h3 className="pt-7 font-bold text-[#706D6D] text-2xl ">
-                QUALITY
-              </h3>
-            </div>
-            <p className=" pl-8">
-              We only produce the best of quality <br /> prints on all popular
-              types of prints.
-            </p>
-          </div>
-
-          <div className=" bg-[#E9F8FE] mx-10 mb-6 md:mb-0 md:mx-0 pl-8 pr-20 pt-6 pb-14 rounded-xl">
-            {/*Affordability  */}
-            <div className=" flex items-center">
-              <img src={affordability} alt="" className=" h-24" />
-              <h3 className="pt-7 font-bold text-[#706D6D] text-2xl ">
-                AFFORDABILITY
-              </h3>
-            </div>
-            <p className=" pl-8">
-              Our prices are highly competitive <br /> in the professional
-              printing space.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Features />
 
       {/* SUBSCRIBE TO NEWS LETTER  */}
       {/* <div className=" mb-20">
