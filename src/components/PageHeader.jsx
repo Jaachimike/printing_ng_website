@@ -11,11 +11,11 @@ const propTypes = {
   header: PropTypes.string,
 };
 
-const PageHeader = ({ header }) => {
+const PageHeader = ({header}) => {
   return (
     <div
-      style={{ backgroundImage: `url(${background})` }}
-      className="bg-cover h-[25vh] lg:h-[15vh] text-white mb-16"
+      style={{backgroundImage: `url(${background})`}}
+      className="bg-cover h-[25vh] lg:h-[15vh]  max-w-[95rem] mx-auto text-white mb-16"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row lg:justify-around py-8">
         <h1 className="text-7xl font-Lobster text-center md:text-left mb-4">
