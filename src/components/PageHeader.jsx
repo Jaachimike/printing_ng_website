@@ -23,7 +23,7 @@ const PageHeader = ({header}) => {
         </h1>
 
         {/* Search Bar  */}
-        <div className="group w-96 md:w-96 lg:w-6/12 rounded-full mx-auto lg:mx-0 bg-white px-6 py-4 flex items-center">
+        <div className="group w-96 md:w-96 lg:w-6/12 rounded-full mx-auto lg:mx-0 bg-white px-6 py-4 flex items-center text-black">
           <div className="relative flex items-center w-full shadow-lg">
             <input
               id="8"
