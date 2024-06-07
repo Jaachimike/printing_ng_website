@@ -39,9 +39,13 @@ const ProductDisplay = ({title, price, description, image, moq}) => {
             </p>
             {/* <p className="text-gray-400 text-xs mb-6">{description}</p> */}
 
-            <div className="duration-500 hover:scale-105 font-semibold flex items-center py-3 px-2 bg-[#DFEFFF] w-fit">
+            <div className="group font-semibold flex items-center py-3 px-3 bg-[#DFEFFF] w-fit">
               <p>Browse {title}</p>
-              <img src={arrow} alt="right arrow" className="h-6 ml-4" />
+              <img
+                src={arrow}
+                alt="right arrow"
+                className="h-6 ml-2 group-hover:translate-x-2 duration-500"
+              />
             </div>
           </div>
         </a>
