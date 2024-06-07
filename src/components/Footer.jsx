@@ -18,21 +18,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#DFEFFF] py-8 pl-8 lg:pl-16 flex flex-col items-start md:flex-row md:justify-between md:items-start *:mb-6">
+    <footer className="max-w-screen-xl mx-auto bg-[#DFEFFF] py-8 pl-8 lg:pl-16 flex flex-col items-start md:flex-row md:justify-between md:items-start *:mb-6">
       {/* 1st column  */}
       <div className="sm:w-1/4">
         <a href="/" className="flex items-center -mt-2 mb-2">
           <img src={Logo} alt="Logo" className="w-auto h-16 mr-4" />
         </a>
-        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-xs">About Us
+        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-sm">About Us
           </a>
-        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-xs">
+        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-sm">
           Contact</a>
-        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-xs">
+        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-sm">
           Track Order</a>
-        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-xs">
+        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-sm">
           Printin Promise</a>
-        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-xs">
+        <a href="/" className="flex items-center -mt-2 mb-4 text-gray-500 ml-8 text-sm">
           Career</a>
       </div>
       {/* second column  */}
@@ -41,7 +41,7 @@ const Footer = () => {
         <ul className="list-unstyled ">
           <li>
             <Link
-              className="text-xs text-gray-500 hover:text-blue-400"
+              className="text-sm text-gray-500 hover:text-blue-400"
               to="about"
               onClick={scrollToTop}
             >
@@ -50,7 +50,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              className="text-xs text-gray-500 hover:text-blue-400"
+              className="text-sm text-gray-500 hover:text-blue-400"
               to="contact"
               onClick={scrollToTop}
             >
@@ -59,7 +59,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              className="text-xs text-gray-500 hover:text-blue-400"
+              className="text-sm text-gray-500 hover:text-blue-400"
               to="track"
               onClick={scrollToTop}
             >
@@ -68,7 +68,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              className="text-xs text-gray-500 hover:text-blue-400"
+              className="text-sm text-gray-500 hover:text-blue-400"
               to="blog"
               onClick={scrollToTop}
             >
@@ -78,7 +78,7 @@ const Footer = () => {
           <li>
             <Link
               to="careers"
-              className=" text-xs text-gray-500 hover:text-blue-400"
+              className=" text-sm text-gray-500 hover:text-blue-400"
               onClick={scrollToTop}
             >
               Shipping and Delivery
@@ -93,7 +93,7 @@ const Footer = () => {
           <li>
             <Link
               to="affiliates"
-              className=" text-xs text-gray-500 hover:text-blue-400"
+              className=" text-sm text-gray-500 hover:text-blue-400"
               onClick={scrollToTop}
             >
               Become an Affiliate
@@ -102,7 +102,7 @@ const Footer = () => {
           <li>
             <Link
               to="login"
-              className="font-bold text-xs text-gray-500 hover:text-blue-400"
+              className="font-bold text-sm text-gray-500 hover:text-blue-400"
               onClick={scrollToTop}
             >
               Login
@@ -111,7 +111,7 @@ const Footer = () => {
           <li>
             <Link
               to="signup"
-              className="font-bold text-xs text-gray-500 hover:text-blue-400"
+              className="font-bold text-sm text-gray-500 hover:text-blue-400"
               onClick={scrollToTop}
             >
               SignUp
