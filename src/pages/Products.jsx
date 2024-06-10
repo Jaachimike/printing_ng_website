@@ -23,7 +23,7 @@ const allProducts = [
   },
   {
     title: "Feather Banners",
-    category: "Banners & Large Format",
+    category: "Feather Banners",
     price: "4499",
     description:
       "Create remarkable adverts with our banners. Showcase your events with style.",
@@ -31,7 +31,7 @@ const allProducts = [
   },
   {
     title: "Custom Mugs",
-    category: "Bags",
+    category: "Mugs",
     price: "2499",
     description:
       "Design custom made full colour mugs for events, corporate branding and events purpose.",
@@ -47,7 +47,7 @@ const allProducts = [
   },
   {
     title: "Business Cards",
-    category: "Brochure",
+    category: "Business Cards",
     price: "74999",
     description:
       "Up your professional game with our exotic business cards. Send those letters with style.",
@@ -55,7 +55,7 @@ const allProducts = [
   },
   {
     title: "Gift Bags",
-    category: "Bags",
+    category: "Gift Bags",
     price: "9999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style.",
@@ -63,7 +63,7 @@ const allProducts = [
   },
   {
     title: "Letter Head",
-    category: "Brochure",
+    category: "Letter Head",
     price: "3999",
     description:
       "Up your professional game with our exotic branded envelopes. Send those letters with style.",
@@ -71,7 +71,7 @@ const allProducts = [
   },
   {
     title: "Magazine",
-    category: "Brochure",
+    category: "Magazine",
     price: "74999",
     description: "Up your professional game with our magazines.",
     image: magazine,
@@ -130,13 +130,23 @@ const Products = () => {
           </li>
           <li
             className={`cursor-pointer px-4 py-2 ${
-              selectedCategory === "Brochure"
+              selectedCategory === "Brochures"
                 ? "bg-blue-500 text-white"
                 : "hover:bg-blue-200"
             }`}
-            onClick={() => handleCategoryChange("Brochure")}
+            onClick={() => handleCategoryChange("Brochures")}
           >
-            Brochure
+            Brochures
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Business Cards"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Business Cards")}
+          >
+            Business Cards
           </li>
           <li
             className={`cursor-pointer px-4 py-2 ${
@@ -147,6 +157,16 @@ const Products = () => {
             onClick={() => handleCategoryChange("Calendars")}
           >
             Calendars
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Campaign Materials"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Campaign Materials")}
+          >
+            Campaign Materials
           </li>
           <li
             className={`cursor-pointer px-4 py-2 ${
@@ -238,12 +258,42 @@ const Products = () => {
           >
             Promotional Items
           </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Stickers"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Stickers")}
+          >
+            Stickers
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Umbrella"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Umbrella")}
+          >
+            Umbrella
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Wedding Stationery"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Wedding Stationery")}
+          >
+            Wedding Stationery
+          </li>
           {/* Add other categories here */}
         </ul>
       </div>
 
       {/* Render filtered products */}
-      <div className="mx-auto max-w-5xl grid grid-cols-1 gap-x-2 gap-y-6">
+      <div className="mx-auto mt-4 max-w-5xl grid grid-cols-1 gap-x-2 gap-y-6 md:grid-cols-2 gap-x-6 gap-y-4 lg:grid-cols-3 gap-x-6 gap-y-6">
         {filteredProducts.map((product, index) => (
           <ProductDisplay
             key={index}
