@@ -158,12 +158,92 @@ const Products = () => {
           >
             Greeting Cards
           </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "ID Cards"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("ID Cards")}
+          >
+            ID Cards
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Labels"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Labels")}
+          >
+            Labels
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Letterhead"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Letterhead")}
+          >
+            Letterhead
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Mugs"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Mugs")}
+          >
+            Mugs
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Notepads & Jotters"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Notepads & Jotters")}
+          >
+            Notepads & Jotters
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Posters"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Posters")}
+          >
+            Posters
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Presentation Folders"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Presentation Folders")}
+          >
+            Presentation Folders
+          </li>
+          <li
+            className={`cursor-pointer px-4 py-2 ${
+              selectedCategory === "Promotional Items"
+                ? "bg-blue-500 text-white"
+                : "hover:bg-blue-200"
+            }`}
+            onClick={() => handleCategoryChange("Promotional Items")}
+          >
+            Promotional Items
+          </li>
           {/* Add other categories here */}
         </ul>
       </div>
 
       {/* Render filtered products */}
-      <div className="mx-auto max-w-5xl grid grid-cols-3 gap-x-2 gap-y-12">
+      <div className="mx-auto max-w-5xl grid grid-cols-1 gap-x-2 gap-y-6">
         {filteredProducts.map((product, index) => (
           <ProductDisplay
             key={index}
