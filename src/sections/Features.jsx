@@ -9,12 +9,12 @@ import affordable from "../assets/svg/features/affordable.svg";
 
 export const Features = () => {
   return (
-    <div className=" mx-auto max-w-7xl mb-20">
-      <div className="mb-7 mx-auto max-w-7xl">
+    <div className=" mx-auto max-w-7xl flex flex-col items-center md:items-start mb-20">
+      <div className="mb-7">
         <p className="text-3xl font-bold">You can count on us for:</p>
       </div>
 
-      <div className=" flex flex-col md:flex-row justify-between">
+      <div className=" flex flex-col md:flex-row justify-between w-full">
         <div className="  mx-10 md:mx-0 mb-6 md:mb-0 rounded-xl flex space-x-5">
           {/*Fast Turnaround*/}
           <img srcSet={fastTurnaround} alt="" className=" h-20" />

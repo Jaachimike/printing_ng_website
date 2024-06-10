@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div
       // style={{backgroundImage: `url(${background})`}}
-      className="bg-cover max-w-[95rem] mx-auto bg-[#DFEFFF] pb-40  text-[#394B63]"
+      className="bg-cover max-w-[95rem] mx-auto bg-[#DFEFFF] pb-32 md:pb-40 mb-20 md:mb-0 text-[#394B63]"
     >
       <div className=" flex flex-col items-center md:items-start ">
         {/* Write-up  */}

@@ -160,7 +160,7 @@ const HomePage = () => {
       <Hero />
       {/* POPULAR PRODUCTS */}
       <div className="mb-20 mt-8 ">
-        <div className="flex justify-between mb-7 items-center mx-auto max-w-7xl">
+        <div className="flex justify-between mb-16 md:mb-7 items-center md:mx-auto max-w-7xl mx-10">
           <SectionHeader header="Popular Products" />
           <p className="duration-500 hover:scale-105">
             <Link to="/products">See All Products</Link>
@@ -183,14 +183,14 @@ const HomePage = () => {
 
       {/* POPULAR CATEGORIES */}
       <div className="mb-20 mt-8">
-        <div className="flex justify-between mb-7 items-center mx-auto max-w-7xl">
+        <div className="flex justify-between mb-16 md:mb-7 items-center md:mx-auto max-w-7xl mx-10">
           <SectionHeader header="Popular Categories" />
           <p className="duration-500 hover:scale-105">
             <Link to="/products">See All Products</Link>
           </p>
         </div>
 
-        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-x-8 gap-y-12 ">
+        <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 ">
           {/* {popularCategoriesDisplay} */}
 
           {popularCategories.map((product, index) => {
