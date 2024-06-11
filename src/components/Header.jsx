@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import Logo from "../assets/svg/Printin logo.svg";
+import whatsappLogo from "../assets/svg/social-media-icons/whatsapp.svg";
+import nigerianFlag from "../assets/svg/nigerianFlag.svg";
 import {Link} from "react-router-dom";
 
 const Header = () => {
@@ -14,14 +16,66 @@ const Header = () => {
 
   return (
     <div>
-      <header className="text-gray-600 max-w-[95rem] mx-auto bg-[#DFEFFF] body-font h-[10vh] py-8 flex items-center">
-        <div className=" bg-white flex justify-end">
-          <div>
-            {/* call number */}
-            <div></div>
+      {/* sub header */}
+      <div className=" max-w-[95rem] mx-auto py-4 bg-[#C1D1E1] ">
+        {/* content div */}
+        <div className="md:flex md:justify-between font-semibold mx-6 lg:mx-24">
+          {/* cost calculator e.t.c */}
+          <div className="hidden md:flex items-center space-x-5  xl:space-x-16">
+            <p>
+              <a href="">Cost Calculator</a>
+            </p>
+            <p>
+              <a href="">Discover Stores</a>
+            </p>
+            <p>
+              <a href="">Track Orders</a>
+            </p>
+          </div>
+          {/* need help ? */}
+          <div className="flex items-center justify-between md:space-x-8 lg:space-x-4 xl:space-x-24">
+            {/* contact number */}
+            <div className="hidden lg:block">
+              <p>
+                Need help? Call: <br />{" "}
+                <span className="text-[#129FF7]">
+                  <a href="tel:2347069000083">+2347069000083</a>
+                </span>{" "}
+                or{" "}
+                <span className="text-[#129FF7]">
+                  <a href="tel:2347069000083">+2347069000083</a>
+                </span>{" "}
+              </p>
+            </div>
+            {/* contact number mobile and tab */}
+            <div className="block lg:hidden">
+              <p className="text-[#129FF7]">
+                <a href="tel:2347069000083">+2347069000083</a>
+              </p>
+              <p className="text-[#129FF7]">
+                <a href="tel:2347069000083">+2347069000083</a>
+              </p>
+            </div>
+            {/* whatsapp */}
+            <div>
+              {" "}
+              <a href="">
+                <img src={whatsappLogo} alt="" />
+              </a>
+            </div>
+            {/* country */}
+            <div>
+              <div className="flex space-x-3 border border-gray-600 rounded-full px-3 py-1">
+                <img src={nigerianFlag} alt="" />
+                <p className="font-bold text-xs md:text-md">Nigeria</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
+      </div>
+      {/* main header */}
+      <header className="text-gray-600 max-w-[95rem] mx-auto bg-[#DFEFFF] h-[10vh] py-8 flex items-center">
+        <div className="container flex mx-6 lg:mx-20 flex-wrap p-5 flex-row items-center justify-between">
           {/* LOGO  */}
           <Link
             className="flex title-font font-medium items-center cursor-pointer mb-4 md:mb-0"

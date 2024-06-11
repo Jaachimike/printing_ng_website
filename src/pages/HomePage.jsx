@@ -160,7 +160,7 @@ const HomePage = () => {
       <Hero />
       {/* POPULAR PRODUCTS */}
       <div className="mb-20 mt-8 ">
-        <div className="flex justify-between mb-16 md:mb-7 items-center md:mx-auto max-w-7xl mx-10">
+        <div className="flex justify-between mb-16 md:mb-7 items-center lg:mx-auto max-w-7xl mx-10">
           <SectionHeader header="Popular Products" />
           <p className="duration-500 hover:scale-105">
             <Link to="/products">See All Products</Link>
@@ -183,7 +183,7 @@ const HomePage = () => {
 
       {/* POPULAR CATEGORIES */}
       <div className="mb-20 mt-8">
-        <div className="flex justify-between mb-16 md:mb-7 items-center md:mx-auto max-w-7xl mx-10">
+        <div className="flex justify-between mb-16 md:mb-7 items-center lg:mx-auto max-w-7xl mx-10">
           <SectionHeader header="Popular Categories" />
           <p className="duration-500 hover:scale-105">
             <Link to="/products">See All Products</Link>

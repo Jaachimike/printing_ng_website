@@ -26,7 +26,7 @@ export const Testimonial = () => {
     <div className="mx-auto max-w-7xl bg-[#EDF6FD] px-10 lg:px-16 py-8 mb-16">
       <div>
         <h2 className="text-3xl font-bold mb-8">What Customers Say About Us</h2>
-        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-8">
+        <div className="flex flex-col space-y-8 lg:space-y-0 lg:flex-row lg:space-x-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}

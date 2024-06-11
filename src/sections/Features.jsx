@@ -9,7 +9,7 @@ import affordable from "../assets/svg/features/affordable.svg";
 
 export const Features = () => {
   return (
-    <div className=" mx-auto max-w-7xl flex flex-col items-center md:items-start mb-20">
+    <div className=" md:mx-10 lg:mx-auto max-w-7xl flex flex-col items-center md:items-start mb-20">
       <div className="mb-7">
         <p className="text-3xl font-bold">You can count on us for:</p>
       </div>
