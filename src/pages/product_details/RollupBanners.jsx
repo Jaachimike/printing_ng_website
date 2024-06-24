@@ -126,7 +126,7 @@ const RollupBanners = () => {
             </p>
             <div className="flex justify-between items-center  space-x-4">
               {/* Quantity Select  */}
-              <div className="w-1/3">
+              <div className="w-2/4">
                 <label
                   for="small"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
