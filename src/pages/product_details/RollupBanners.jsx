@@ -81,9 +81,9 @@ const RollupBanners = () => {
             <img
               src={rollup_banner}
               alt="Product Image"
-              className="h-96 mb-6"
+              className="h-60 lg:h-96 mb-6"
             />
-            <div className="flex space-x-12">
+            <div className="flex -ml-3 space-x-2 lg:space-x-12">
               <img
                 src={rollup_banner}
                 alt="Product Image"
@@ -107,7 +107,7 @@ const RollupBanners = () => {
             </div>
           </div>
           {/* Product Desription  */}
-          <div className="w-2/3 ml-36">
+          <div className="w-full lg:w-2/3 lg:ml-36">
             <h2 className=" text-[#0064A3] font-bold text-xl mb-4">
               Rollup Banner XL
             </h2>
@@ -155,7 +155,7 @@ const RollupBanners = () => {
           </div>
         </div>
         {/* FAQ's  */}
-        <div className="grid grid-cols-2">
+        <div className="flex flex-col lg:grid grid-cols-2">
         <div className="mb-28">
           <h2 className=" text-[#0064A3] font-bold text-center text-xl mb-4">
             Frequently Asked Questions (FAQ)
@@ -172,7 +172,7 @@ const RollupBanners = () => {
           <h2 className=" text-[#0064A3] font-bold text-center text-xl mb-4">
             Related Products
           </h2>
-          <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 ">
+          <div className=" mx-auto max-w-7xl grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 ">
             {popularCategories.map((product, index) => {
               return (
                 <ProductDisplay
