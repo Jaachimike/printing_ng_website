@@ -13,6 +13,7 @@ import gift_bags from "../../assets/png/product_images/GIFT-BAGS.png";
 import letterhead from "../../assets/png/product_images/LETTER-HEAD.png";
 import magazine from "../../assets/png/product_images/MAGAZINE.png";
 import product_packaging from "../../assets/png/product_images/PRODUCT-PACKAGING.png";
+import { Testimonial } from "../../sections/Testimonial";
 
 const faqs = [
   {
@@ -72,7 +73,7 @@ const RollupBanners = () => {
   return (
     <div>
       <PageHeader header="Order" />
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Product Display */}
         <div className="px-5 md:px-0 grid grid-cols-1 md:grid-cols-2 mb-10">
           {/* Product Image */}
@@ -106,22 +107,26 @@ const RollupBanners = () => {
             </div>
           </div>
           {/* Product Desription  */}
-          <div>
+          <div className="w-2/3 ml-36">
             <h2 className=" text-[#0064A3] font-bold text-xl mb-4">
               Rollup Banner XL
             </h2>
-            <p className="mb-7">
+            <p className="mb-6">
               Place your Order for the Rollup Banner XL by uploading your own
               design or requesting that our team of graphic designers do the
               design for you. We deliver nationwide
             </p>
-            <p className="mb-20">
+            <p className="mb-8">
+              <span>Material:</span> <br/>
+              Full colour digital printing on PVC material. Size: 33 x 81 inches 
+            </p>
+            <p className="mb-12">
               <span>Finishing:</span> <br />
               Laminated and folded into shape with rope handles.
             </p>
             <div className="flex justify-between items-center  space-x-4">
               {/* Quantity Select  */}
-              <div className="w-full">
+              <div className="w-1/3">
                 <label
                   for="small"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -149,95 +154,8 @@ const RollupBanners = () => {
             </div>
           </div>
         </div>
-
-        {/* Product Full Details  */}
-        <div className="px-5 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-x-14 mb-16">
-          <div>
-            <h2 className=" text-[#0064A3] font-bold text-xl mb-4">
-              Rollup Banner XL
-            </h2>
-            <p className="mb-7">
-              Place your Order for the Rollup Banner XL by uploading your own
-              design or requesting that our team of graphic designers do the
-              design for you. We deliver nationwide
-            </p>
-            <p className="mb-20">
-              <span>Finishing:</span> <br />
-              Laminated and folded into shape with rope handles.
-            </p>
-          </div>
-
-          {/* Requirements and Specifications  */}
-          <div className="bg-[#E9F8FE] px-6 py-8 rounded-lg text-[#0064A3] shadow-xl">
-            <h2 className=" text-[#0064A3] font-bold text-xl mb-4">
-              Requirements/Specifications
-            </h2>
-            {/* Paper Type  */}
-            <div className="w-full">
-              <select
-                id="small"
-                class="block w-full py-2 px-5 mb-6 text-sm  border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option selected>Paper Type</option>
-                <option value="US">100</option>
-                <option value="CA">50</option>
-                <option value="FR">25</option>
-                <option value="DE">10</option>
-              </select>
-            </div>
-            {/* Paper Thickness  */}
-            <div className="w-full">
-              <select
-                id="small"
-                class="block w-full py-2 px-5 mb-6 text-sm border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option selected>Paper Thickness</option>
-                <option value="US">100</option>
-                <option value="CA">50</option>
-                <option value="FR">25</option>
-                <option value="DE">10</option>
-              </select>
-            </div>
-            {/* Material */}
-            <div className="w-full">
-              <select
-                id="small"
-                class="block w-full py-2 px-5 mb-6 text-sm border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option selected>Material</option>
-                <option value="US">100</option>
-                <option value="CA">50</option>
-                <option value="FR">25</option>
-                <option value="DE">10</option>
-              </select>
-            </div>
-            {/* Lamination */}
-            <div className="w-full">
-              <select
-                id="small"
-                class="block w-full py-2 px-5 mb-6 text-sm border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option selected>Lamination</option>
-                <option value="US">100</option>
-                <option value="CA">50</option>
-                <option value="FR">25</option>
-                <option value="DE">10</option>
-              </select>
-            </div>
-            {/* Delivery Method */}
-            <div className="w-full">
-              <select
-                id="small"
-                class="block w-full py-2 px-5 mb-6 text-sm border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option selected>Delivery Method</option>
-                <option value="US">Pickup</option>
-                <option value="CA">Home Delivery</option>
-              </select>
-            </div>
-          </div>
-        </div>
         {/* FAQ's  */}
+        <div className="grid grid-cols-2">
         <div className="mb-28">
           <h2 className=" text-[#0064A3] font-bold text-center text-xl mb-4">
             Frequently Asked Questions (FAQ)
@@ -245,6 +163,8 @@ const RollupBanners = () => {
           <div>
             <Faqs faqsData={faqs} />
           </div>
+        </div>
+        <Testimonial layout="list" />
         </div>
 
         {/* Related Products */}
